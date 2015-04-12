@@ -1,0 +1,266 @@
+/**
+ * Import Variables
+ */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+a {
+  text-decoration: none;
+  color: black; }
+
+/*# sourceMappingURL=reset.css.map */
+/**
+ * Color Variables
+ */
+@font-face {
+  font-family: 'pt_serif';
+  src: url("../font/PT_Serif-Web-Bold.ttf") format("truetype");
+  /* Safari, Android, iOS */ }
+@font-face {
+  font-family: 'league_spartan';
+  src: url("../font/league-spartan.bold.ttf") format("truetype");
+  /* Safari, Android, iOS */ }
+/**
+ * Import Bourbon and Neat
+ */
+html {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
+
+*, *:before, *:after {
+  -webkit-box-sizing: inherit;
+  -moz-box-sizing: inherit;
+  box-sizing: inherit; }
+
+/**
+ * Import Components
+ */
+body {
+  height: 100%;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; }
+
+/**
+ *	Background 
+ */
+[class$="--bg"] {
+  width: 100%; }
+
+.header--bg {
+  height: 300px;
+  background: #6000a8;
+  color: white; }
+
+/**
+ * General styles
+ */
+.part__name {
+  margin-top: 75px;
+  text-transform: uppercase;
+  font-family: "League Spartan";
+  font-size: 14px; }
+
+.part__heading {
+  margin: 10px 0 40px 0;
+  font-family: "PT Serif";
+  font-weight: bold;
+  font-size: 36px; }
+
+/**
+ * 	Container settings
+ */
+.header, .quote, .featured, .series, .footer, .post {
+  max-width: 960px;
+  margin-left: auto;
+  margin-right: auto; }
+  .header::after, .quote::after, .featured::after, .series::after, .footer::after, .post::after {
+    clear: both;
+    content: "";
+    display: table; }
+
+/**
+ * Header
+ */
+.header__logo {
+  float: left;
+  display: block;
+  margin-right: 0.52356%;
+  width: 32.98429%; }
+  .header__logo:last-child {
+    margin-right: 0; }
+  .header__logo img {
+    margin-top: 85px;
+    width: 250px; }
+.header__nav {
+  margin-top: 140px;
+  margin-left: 33.50785%;
+  float: left;
+  display: block;
+  margin-right: 0.52356%;
+  width: 32.98429%; }
+  .header__nav:last-child {
+    margin-right: 0; }
+  .header__nav ul {
+    font-size: 14px;
+    font-family: "League Spartan"; }
+    .header__nav ul li {
+      display: inline;
+      margin-right: 50px; }
+      .header__nav ul li a {
+        color: white;
+        text-transform: lowercase; }
+        .header__nav ul li a:hover {
+          text-decoration: underline; }
+
+/**
+ * Featured
+ */
+.featured {
+  color: #707070; }
+  .featured__embed {
+    margin: 0 0 75px 0;
+    height: 200px; }
+  .featured__episode > span {
+    color: #6000a8; }
+
+/**
+ * Quote
+ */
+.quote--bg {
+  background: #48F8B3;
+  height: 300px; }
+.quote__body {
+  padding-top: 80px;
+  font-size: 48px;
+  font-family: "PT Serif";
+  line-height: 1.15;
+  font-weight: bold; }
+.quote__author {
+  padding-top: 30px;
+  font-family: "League Spartan";
+  font-size: 14px; }
+
+/**
+ * Series 
+ */
+.series__heading {
+  color: #707070; }
+.series__episode__next {
+  background: #6000a8;
+  color: white;
+  height: 300px;
+  text-align: center; }
+  .series__episode__next__name {
+    padding-top: 20px;
+    font-family: "League Spartan";
+    text-transform: uppercase;
+    font-size: 14px; }
+  .series__episode__next__count {
+    padding-top: 80px;
+    font-family: "PT Serif";
+    font-size: 100px; }
+.series ul {
+  float: left;
+  display: block;
+  margin-right: 0.52356%;
+  width: 100%; }
+  .series ul:last-child {
+    margin-right: 0; }
+  .series ul li {
+    float: left;
+    display: block;
+    margin-right: 0.52356%;
+    width: 32.98429%;
+    margin-bottom: 20px; }
+    .series ul li:last-child {
+      margin-right: 0; }
+    .series ul li:nth-child(3n) {
+      margin-right: 0; }
+    .series ul li:nth-child(3n+1) {
+      clear: left; }
+    .series ul li img {
+      filter: grayscale(100%);
+      -webkit-filter: grayscale(75%);
+      transition: -webkit-filter 0.5s ease; }
+      .series ul li img:hover {
+        transition: -webkit-filter 0.5s ease;
+        -webkit-filter: grayscale(0%); }
+
+/**
+ * Post
+ */
+.post__embed {
+  margin-bottom: 20px; }
+.post__subheading {
+  font-family: "PT Serif";
+  font-size: 20px;
+  font-weight: bold; }
+.post__section {
+  text-transform: uppercase;
+  font-family: "League Spartan";
+  font-size: 18px;
+  margin: 50px 0 20px 0; }
+
+/**
+ * Footer
+ */
+.footer {
+  color: white;
+  height: 150px; }
+  .footer--bg {
+    background: #262626; }
+  .footer__instagram, .footer__twitter, .footer__info {
+    float: left;
+    display: block;
+    margin-right: 0.52356%;
+    width: 32.98429%;
+    background: red; }
+    .footer__instagram:last-child, .footer__twitter:last-child, .footer__info:last-child {
+      margin-right: 0; }
+
+/*# sourceMappingURL=index.css.map */

@@ -1,0 +1,239 @@
+/**
+ * Import Variables
+ */
+
+@import "reset";
+@import "_var";
+@import "_font-face"; 
+
+/**
+ * Import Bourbon and Neat
+ */
+
+@import "bourbon/bourbon";
+@import "grid-settings";
+@import "neat/neat";
+
+/**
+ * Import Components
+ */
+
+body {
+	height: 100%;
+	-webkit-font-smoothing:antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+/**
+ *	Background 
+ */
+
+[class$="--bg"] {
+	width: 100%;
+}
+
+.header--bg {
+	height: 300px;
+	background: $violet;
+	color: white;
+}
+
+/**
+ * General styles
+ */
+
+.part__name {
+	margin-top: 75px;
+	text-transform: uppercase;
+	font-family: "League Spartan";
+	font-size: 14px;
+}
+
+.part__heading {
+	margin: 10px 0 40px 0;
+	font-family: "PT Serif";
+	font-weight: bold;
+	font-size: 36px;
+}
+
+/**
+ * 	Container settings
+ */
+
+.header, .quote, .featured, .series, .footer, .post {
+	@include outer-container();
+}
+
+/**
+ * Header
+ */
+
+.header {
+	&__logo {
+		@include span-columns(4);
+		// background: rgba(0,0,0,0.2);
+		img {
+			margin-top: 85px;
+			width: 250px;
+		}
+	}
+
+	&__nav {
+		margin-top: 140px;
+		// background: rgba(0,0,0,0.4);
+		@include shift(4);
+		@include span-columns(4);
+		ul {
+			font-size: 14px;
+			font-family: "League Spartan";
+			li {
+				display: inline;
+				margin-right: 50px;
+				a {
+					color: white;
+					text-transform: lowercase;
+					&:hover {
+						text-decoration: underline;
+					}
+				}
+			}
+		}
+	}
+}
+
+
+
+/**
+ * Featured
+ */
+
+.featured {
+
+	color: $grey;
+
+	&__embed {
+		margin: 0 0 75px 0;
+		height: 200px;
+	}
+
+	&__episode > span {
+		color: $violet;
+	} 
+}
+
+/**
+ * Quote
+ */
+
+.quote {
+	&--bg {
+		background: $green;
+		height: 300px;
+	}
+	&__body {
+		padding-top: 80px;
+		font-size: 48px;
+		font-family: "PT Serif";
+		line-height: 1.15;
+		font-weight: bold;
+	}
+
+	&__author {
+		padding-top: 30px;
+		font-family: "League Spartan";
+		font-size: 14px;
+	}
+}
+
+/**
+ * Series 
+ */
+
+.series {
+	&__heading {
+		color: $grey;
+	}
+
+	&__episode {
+		&__next {
+			background: $violet;
+			color: white;
+			height: 300px;
+			text-align: center;
+
+			&__name {
+				padding-top: 20px;
+				font-family: "League Spartan";
+				text-transform: uppercase;
+				font-size: 14px;
+			}
+			&__count {
+				padding-top: 80px;
+				font-family: "PT Serif";
+				font-size: 100px;
+			}
+		}
+	}
+
+	ul {
+		@include span-columns(12);
+		li {
+			@include span-columns(4);
+  			@include omega(3n);
+  			margin-bottom: 20px;
+
+  			img {
+  				filter: grayscale(100%);
+				-webkit-filter: grayscale(75%);
+				transition: -webkit-filter 0.5s ease;
+				&:hover {
+					transition: -webkit-filter 0.5s ease;
+					-webkit-filter: grayscale(0%);
+				}
+  			}
+		}
+	}
+}
+
+/**
+ * Post
+ */
+
+ .post {
+ 	&__embed {
+ 		margin-bottom: 20px;
+ 	}
+
+ 	&__subheading {
+ 		font-family: "PT Serif";
+ 		font-size: 20px;
+ 		font-weight: bold;
+ 	}
+
+ 	&__section {
+ 		text-transform: uppercase;
+ 		font-family: "League Spartan";
+ 		font-size: 18px;
+ 		margin: 50px 0 20px 0;
+ 	}
+ }
+
+/**
+ * Footer
+ */
+
+ .footer {
+
+	&--bg {
+		background: $footer--grey;
+	}
+	
+	&__instagram, &__twitter, &__info {
+		@include span-columns(4);
+		background: red;
+	}
+	
+
+	color: white;
+ 	height: 150px;
+ }
